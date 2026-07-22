@@ -4,7 +4,7 @@
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project: building and populating a smart sales data warehouse using ETVL.
+> Professional Python project exploring how I can build and populate a smart sales data warehouse using the ETVL process.
 
 ## Project Description
 
@@ -13,10 +13,9 @@ and loading prepared data into it using the ETVL process:
 Extract from prepared CSV files, Transform for the warehouse schema,
 Verify row counts and integrity, then Load into SQLite.
 
-We work with cleaned smart sales data containing
-customers, products, and sales records.
+In this project, I worked with cleaned smart sales data containing customers, products, and sales records.
 
-We learn to:
+I learned to:
 
 - create a DuckDB data warehouse programmatically
 - extract and transform prepared CSV data for the warehouse schema
@@ -25,8 +24,7 @@ We learn to:
 
 ## Use Your Prepared Data
 
-After running the example,
-copy over your data/prepared/ files to use in this project.
+I replaced the example files with my prepared customer, product, and sales datasets from the previous project before creating the warehouse.
 
 ## VS Code and DuckDB Files
 
@@ -105,7 +103,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/bintel-04-warehouse
+git clone https://github.com/ajerineg-coder/bintel-04-warehouse
 
 cd bintel-04-warehouse
 code .
@@ -176,38 +174,6 @@ If you try to run Python that interacts with the DuckDB file and get an error th
 file is being used by another process, just
 click the **DuckDB left-side tab**, right-click your database and select **Detach Database**.
 
-## Workflow 1. Example Output (Remove or Replace this Section after You Verify)
-
-```shell
-| INFO | BI | START verify warehouse schema....
-| INFO | BI | SHOW TABLES returns a list of all tables in the database
-| INFO | BI | - Calling .fetchall() on the result of SHOW TABLES
-| INFO | BI | - Gets the result - we can store it in a variable named 'tables'
-| INFO | BI |   - Retrieved tables from the warehouse.
-| INFO | BI |  - tables has a tuple for each table in the warehouse
-| INFO | BI |  - the first tuple element (at the 0 index) is the table name
-| INFO | BI |   Tables in warehouse: ['dim_customers', 'dim_products', 'fact_sales']
-| INFO | BI | Workflow 1-CREATE DW complete
-| INFO | BI | ========================
-| INFO | BI | Executed successfully!
-| INFO | BI | ========================
-```
-
-## Workflow 2. Example Output (Remove or Replace this Section after You Verify)
-
-```shell
-| INFO | BI | ========================
-| INFO | BI | ROW COUNTS AFTER LOAD
-| INFO | BI | ========================
-| INFO | BI | CALL a function to verify row counts........
-| INFO | BI |   PASS: dim_customers has 200 rows
-| INFO | BI |   PASS: dim_products has 100 rows
-| INFO | BI |   PASS: fact_sales has 2392 rows
-| INFO | BI | Workflow 2-ETL complete
-| INFO | BI | ========================
-| INFO | BI | Executed successfully!
-```
-
 ## Findings and Visuals
 
 Take screenshots of your charts and provide them here with a discussion.
@@ -221,7 +187,8 @@ In your custom project:
 - this `README.md` should include your commands, process, and visuals
 - `docs/index.md` should include your narrative
 
-Replace these placeholders with screenshots from your own project run:
+
+This project helped me better understand how prepared data moves into a data warehouse using the ETVL process. Seeing the warehouse created and populated made it easier to connect the concepts we've been learning with a real example. The visualizations also helped confirm that the data loaded correctly and was ready for analysis.
 
 ![Total Sales by Region](./docs/images/Figure_1.png)
 
