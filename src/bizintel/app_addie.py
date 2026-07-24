@@ -33,6 +33,7 @@ from pathlib import Path
 from typing import Final
 
 from datafun_toolkit.logger import log_path
+import matplotlib.pyplot as plt
 import pandas as pd
 
 from bizintel.utils_data import (
@@ -332,6 +333,9 @@ def main() -> None:
 
     LOG.info("CALL a function to summarize the datasets........")
     summarize(df_customers, df_products, df_sales)
+
+    LOG.info("CALL a function to show charts........")
+    plt.show()
 
     LOG.info("Workflow complete")
     LOG.info("CLOSE chart windows to continue.")
